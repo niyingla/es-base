@@ -23,16 +23,18 @@ POST /test_index/doc
   "age":20
 }
 
+#根据id查询一条记录
 # query document
 GET /test_index/doc/1
 
-# query
+# query 全表查询
 GET /test_index/doc/_search
 
-
+#全表查询
 GET /test_index/doc/_search
 {
   "query":{
+  #指定查询条件
     "term": {
       "_id": "1"
     }
@@ -41,23 +43,32 @@ GET /test_index/doc/_search
 
 GET test_index/_search
 
-# bulk api
+# bulk api 批量操作 第一行为目标index等 第二行为数据（如果有）
+# 一般第一行是指定文档 type等信息 index（和create 差别是会覆盖） 表示创建 update 更新 。。。
 POST _bulk
+# 操作的文档信息 index type id等 文档数据
 {"index":{"_index":"test_index","_type":"doc","_id":"3"}}
 {"username":"alfred","age":20}
+# 删除数据 条件
 {"delete":{"_index":"test_index","_type":"doc","_id":"1"}}
+# 修改数据 条件 后面跟修改内容
 {"update":{"_id":"2","_index":"test_index","_type":"doc"}}
 {"doc":{"age":"20"}}
 
+#会返回每一个语句的结果
+
+# 批量查询
 # multi_get
 GET /_mget
 {
   "docs": [
+    #条件1
     {"_index": "test_index","_type": "doc","_id": "3"},
+    #条件2
     {"_index": "test_index","_type": "doc","_id": "2"}
   ]
 }
-
+# 结果也会挨个返回
 
 
 
