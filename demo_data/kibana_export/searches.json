@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "210fcf70-2b5c-11e8-b5b0-798ed0b62c97",
+    "_type": "search",
+    "_source": {
+      "title": "[Project] air quality",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status",
+        "value"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"1c7c3300-2b5b-11e8-b5b0-798ed0b62c97\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"1c7c3300-2b5b-11e8-b5b0-798ed0b62c97\",\"type\":\"phrase\",\"key\":\"status\",\"value\":\"Valid\",\"params\":{\"query\":\"Valid\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"status\":{\"query\":\"Valid\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "053de9b0-2bc7-11e8-990e-b5275f7b2117",
+    "_type": "search",
+    "_source": {
+      "title": "[Project]myairbnb",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "host_image",
+        "host_name",
+        "image",
+        "name",
+        "bed_type",
+        "bedrooms",
+        "price",
+        "listing_url"
+      ],
+      "sort": [
+        "_score",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e1455850-2bc5-11e8-990e-b5275f7b2117\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+    "_type": "search",
+    "_source": {
+      "title": "[Project] imooc nginx logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "hostname",
+        "request",
+        "clientip",
+        "referrer_host",
+        "useragent.device"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    }
+  }
+]

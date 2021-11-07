@@ -1,0 +1,799 @@
+[
+  {
+    "_id": "761efdf0-2bf3-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - AQI 指数按时间分布分析",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"rate_level\",\"order\":\"desc\",\"orderBy\":\"_term\",\"size\":8},\"schema\":\"group\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"@timestamp\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"params\":{\"addLegend\":true,\"addTooltip\":true,\"colorSchema\":\"Blues\",\"colorsNumber\":4,\"colorsRange\":[],\"enableHover\":false,\"invertColors\":false,\"legendPosition\":\"right\",\"percentageMode\":true,\"setColorRange\":false,\"times\":[],\"type\":\"heatmap\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"color\":\"#555\",\"rotate\":0,\"show\":false},\"scale\":{\"defaultYExtents\":false,\"type\":\"linear\"},\"show\":false,\"type\":\"value\"}]},\"title\":\"[Project] 空气质量分析 - AQI 指数按时间分布分析\",\"type\":\"heatmap\"}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0% - 25%\":\"rgb(247,251,255)\",\"25% - 50%\":\"rgb(198,219,239)\",\"50% - 75%\":\"rgb(107,174,214)\",\"75% - 100%\":\"rgb(33,113,181)\"},\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"895ed930-2b76-11e8-b5b0-798ed0b62c97\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "815a5c10-2c3d-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 质量按时间分布",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 质量按时间分布\",\"type\":\"timelion\",\"params\":{\"expression\":\"(.es(index=air_quality_days,q='value_max:<=50').bars().label('Good').color('#53B78D'),.es(index=air_quality_days,q='value_max:(>50 AND <=100)').bars().label('Moderate').color('#F6C143'),.es(index=air_quality_days,q='value_max:(>100 AND <=150)').bars().label('Unhealthy for Sensitive Group').color('#F29938'),.es(index=air_quality_days,q='value_max:(>150 AND <=200)').bars().label('Unhealthy').color('#EC5729'),.es(index=air_quality_days,q='value_max:(>200 AND <=300)').bars().label('Very Unhealthy').color('#DD392C'),.es(index=air_quality_days,q='value_max:>300').bars().label('Hazardous').color('#8E1C4D')).bars(width=15).legend(columns=6)\",\"interval\":\"1M\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "5bf1f190-2c3d-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 质量分布",
+      "visState": "{\"type\":\"timelion\",\"title\":\"[Project] 空气质量分析 - 质量分布\",\"params\":{\"expression\":\".es(index=air_quality_days,q='value_max:<=50').bars().label('Good').color('#53B78D'),.es(index=air_quality_days,q='value_max:>50 AND <=100').bars().label('Moderate').color('#F6C143'),.es(index=air_quality_days,q='value_max:>100 AND <=150').bars().label('Unhealthy for Sensitive Group').color('#F29938'),.es(index=air_quality_days,q='value_max:>150 AND <=200').bars().label('Unhealthy').color('#EC5729'),.es(index=air_quality_days,q='value_max:>200 AND <=300').bars().label('Very Unhealthy').color('#DD392C'),.es(index=air_quality_days,q='value_max:>300').bars().label('Hazardous').color('#8E1C4D')\",\"interval\":\"1M\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "cf96ee50-2c49-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - AQI 质量月份的占比情况",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - AQI 质量月份的占比情况\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"month\",\"size\":12,\"order\":\"asc\",\"orderBy\":\"_term\",\"customLabel\":\"月份\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"rate_level\",\"size\":6,\"order\":\"asc\",\"orderBy\":\"_term\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"year\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"year\",\"row\":true}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"1-Good\":\"#B7DBAB\",\"2-Moderate\":\"#F2C96D\",\"3-Unhealthy for Sensitive Groups\":\"#E5AC0E\",\"4-Unhealthy\":\"#E24D42\",\"5-Very Unhealthy\":\"#890F02\",\"6-Hazardous\":\"#58140C\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"895ed930-2b76-11e8-b5b0-798ed0b62c97\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "9d83cfe0-2c4f-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 每年蓝天占比",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 每年蓝天占比\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=air_quality_days,q='value_max:<=100').divide(.es(index=air_quality_days)).multiply(100).lines(fill=1,width=1).label('蓝天占比')\",\"interval\":\"1y\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "47a3c0c0-2c50-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 每月蓝天占比",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 每月蓝天占比\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=air_quality_days,q='value_max:<=100').divide(.es(index=air_quality_days)).multiply(100).lines(fill=1,width=1).label('蓝天占比')\",\"interval\":\"1M\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "d1379a70-2c53-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 描述 md",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 描述 md\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"###### 数据来源：[美国大使馆PM2.5监控数据](http://www.stateair.net/web/historical/1/1.html)\\n\\n## 雾霾困扰着北京居民\\n![](http://www.levert.ma/wp-content/uploads/2016/12/pollution-678x381.jpg?x48438)\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "b8f13290-2c54-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 北京质量问题分析 md",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 北京质量问题分析 md\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"## 北京空气质量这些年有改善吗？\\n\\n### 分析\\n从👇下面的图表分析我们可以看到北京的蓝天总数占比呈上升趋势，也就是说空气质量在改善\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "256f8260-2c54-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - aqi md",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - aqi md\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"## 空气质量指数(AQI)介绍\\n![](http://www.bjms.com.cn/userfiles/image/d01.jpg)\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "b8a187c0-2c5b-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - AQI 简化质量随时间分布占比(去年)",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - AQI 简化质量随时间分布占比(去年)\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":\"3\",\"point_size\":1,\"fill\":\"1\",\"stacked\":\"percent\",\"split_filters\":[{\"filter\":\"value_max:>200\",\"label\":\"Very Unhealthy\",\"color\":\"rgba(142,28,77,1)\",\"id\":\"f7003d71-2c3f-11e8-9df6-6119ff8a422d\"},{\"filter\":\"value_max:(>100 && <=200)\",\"label\":\"Unhealthy\",\"color\":\"rgba(242,153,56,1)\",\"id\":\"1fa1b2e1-2c40-11e8-9df6-6119ff8a422d\"},{\"filter\":\"value_max:<=100\",\"label\":\"Good\",\"color\":\"rgba(83,183,141,1)\",\"id\":\"20432300-2c40-11e8-9df6-6119ff8a422d\"}],\"label\":\"\",\"offset_time\":\"1y\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"air_quality_days\",\"interval\":\"1M\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":0,\"show_grid\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "7feeb7f0-2c5a-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 2016 vs 2015 unhealthy 占比 TL",
+      "visState": "{\"type\":\"timelion\",\"title\":\"[Project] 空气质量分析 - 2016 vs 2015 unhealthy 占比 TL\",\"params\":{\"expression\":\".es(index=air_quality_days,q='value_max:>150',offset=-1y).divide(.es(index=air_quality_days,offset=-1y)).multiply(100).label(2015).lines(fill=1,width=1),.es(index=air_quality_days,q='value_max:>150').divide(.es(index=air_quality_days)).multiply(100).label(2016).lines(fill=3,width=1)\",\"interval\":\"1M\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "316e3de0-2c59-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 2016 VS 2015 PM25最大值比较 VB",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 2016 VS 2015 PM25最大值比较 VB\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"1w\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"fill\":\"0.2\",\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"2016年 PM25 最大值\",\"line_width\":\"0\",\"metrics\":[{\"field\":\"value_max\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\"}],\"point_size\":\"0\",\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(104,188,0,0.41)\",\"filter\":\"value_max:>200\",\"id\":\"6dca3500-2c59-11e8-bd4d-11848c55d643\",\"label\":\"\"}],\"split_mode\":\"everything\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"fill\":\"0\",\"formatter\":\"number\",\"id\":\"10037bf0-2c5b-11e8-88f5-07aa76bf75d8\",\"label\":\"2016年 PM25 平均值\",\"line_width\":\"3\",\"metrics\":[{\"field\":\"value_max\",\"id\":\"1003a300-2c5b-11e8-88f5-07aa76bf75d8\",\"type\":\"avg\"},{\"field\":\"1003a300-2c5b-11e8-88f5-07aa76bf75d8\",\"id\":\"11da10b0-2c5b-11e8-88f5-07aa76bf75d8\",\"sigma\":\"\",\"type\":\"avg_bucket\"}],\"point_size\":\"0\",\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(104,188,0,0.41)\",\"filter\":\"value_max:>200\",\"id\":\"6dca3500-2c59-11e8-bd4d-11848c55d643\",\"label\":\"\"}],\"split_mode\":\"everything\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(252,196,0,1)\",\"fill\":\"0.2\",\"formatter\":\"number\",\"id\":\"42a7f630-2c5b-11e8-9966-65dbc02f9055\",\"label\":\"2015年 PM25 最大值\",\"line_width\":\"0\",\"metrics\":[{\"field\":\"value_max\",\"id\":\"42a7f631-2c5b-11e8-9966-65dbc02f9055\",\"type\":\"avg\"}],\"point_size\":\"0\",\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(104,188,0,0.41)\",\"filter\":\"value_max:>200\",\"id\":\"6dca3500-2c59-11e8-bd4d-11848c55d643\",\"label\":\"\"}],\"split_mode\":\"everything\",\"stacked\":\"none\",\"offset_time\":\"1y\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(252,196,0,1)\",\"fill\":\"0\",\"formatter\":\"number\",\"id\":\"445d6e60-2c5b-11e8-9966-65dbc02f9055\",\"label\":\"2015年 PM25 平均值\",\"line_width\":\"3\",\"metrics\":[{\"field\":\"value_max\",\"id\":\"445d6e61-2c5b-11e8-9966-65dbc02f9055\",\"type\":\"avg\"},{\"field\":\"445d6e61-2c5b-11e8-9966-65dbc02f9055\",\"id\":\"445d6e62-2c5b-11e8-9966-65dbc02f9055\",\"sigma\":\"\",\"type\":\"avg_bucket\"}],\"point_size\":\"0\",\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(104,188,0,0.41)\",\"filter\":\"value_max:>200\",\"id\":\"6dca3500-2c59-11e8-bd4d-11848c55d643\",\"label\":\"\"}],\"split_mode\":\"everything\",\"stacked\":\"none\",\"offset_time\":\"1y\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "eadb64e0-2c51-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 每年蓝天占比饼图",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 每年蓝天占比饼图\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":false,\"values\":false,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"year\",\"size\":10,\"order\":\"asc\",\"orderBy\":\"_term\",\"row\":false}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"rate_level\",\"size\":6,\"order\":\"asc\",\"orderBy\":\"_term\",\"customLabel\":\"\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"1-Good\":\"#9AC48A\",\"2-Moderate\":\"#F4D598\",\"3-Unhealthy for Sensitive Groups\":\"#EAB839\",\"4-Unhealthy\":\"#E0752D\",\"5-Very Unhealthy\":\"#BF1B00\",\"6-Hazardous\":\"#58140C\"},\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"895ed930-2b76-11e8-b5b0-798ed0b62c97\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "905c0da0-2c5e-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 雾霾天数 VB Metric(去年)",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 雾霾天数 VB Metric(去年)\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"metric\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"},{\"id\":\"3d61d5d0-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"type\":\"series_agg\",\"function\":\"overall_sum\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"filter\":\"value_max:>200\",\"terms_field\":\"@timestamp\",\"offset_time\":\"1y\",\"label\":\"雾霾天数\"},{\"id\":\"666e6920-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"666e6921-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"type\":\"count\"},{\"id\":\"6b8c1290-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"type\":\"series_agg\",\"function\":\"overall_sum\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"总天数\",\"offset_time\":\"1y\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"air_quality_days\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"background_color_rules\":[{\"id\":\"fa9f1370-2c5d-11e8-8d2c-9b13bbcbd1a4\"}]},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "8390c110-2c5e-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 雾霾天数 VB Metric",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 雾霾天数 VB Metric\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"metric\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"},{\"id\":\"3d61d5d0-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"type\":\"series_agg\",\"function\":\"overall_sum\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"filter\":\"value_max:>200\",\"terms_field\":\"@timestamp\",\"offset_time\":\"\",\"label\":\"雾霾天数\"},{\"id\":\"666e6920-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"666e6921-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"type\":\"count\"},{\"id\":\"6b8c1290-2c5e-11e8-8d2c-9b13bbcbd1a4\",\"type\":\"series_agg\",\"function\":\"overall_sum\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"总天数\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"air_quality_days\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"background_color_rules\":[{\"id\":\"fa9f1370-2c5d-11e8-8d2c-9b13bbcbd1a4\"}]},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "73d5e4c0-2c55-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 链接 md",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 链接 md\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"# 北京空气质量分析\\n[【背景介绍】](http://127.0.0.1:5601/app/kibana#/dashboard/dbbab9d0-2c55-11e8-990e-b5275f7b2117?_g=\\\\(refreshInterval%3A\\\\(display%3AOff%2Cpause%3A!f%2Cvalue%3A0\\\\)%2Ctime%3A\\\\(from%3Anow-10y%2Cmode%3Arelative%2Cto%3Anow\\\\)\\\\))\\n[【北京的空气质量有改善吗？】](http://127.0.0.1:5601/app/kibana#/dashboard/a9ff72a0-2c4b-11e8-990e-b5275f7b2117?_g=\\\\(refreshInterval%3A\\\\(display%3AOff%2Cpause%3A!f%2Cvalue%3A0\\\\)%2Ctime%3A\\\\(from%3Anow-10y%2Cmode%3Arelative%2Cto%3Anow\\\\)\\\\))\\n[【2016年底的北京雾霾是什么情况？】](http://127.0.0.1:5601/app/kibana#/dashboard/84faa6c0-2c5d-11e8-990e-b5275f7b2117?_g=\\\\(refreshInterval%3A\\\\(display%3AOff%2Cpause%3A!f%2Cvalue%3A0\\\\)%2Ctime%3A\\\\(from%3A'Sat%20Oct%2001%202016%2000%3A00%3A00%20GMT%2B0800'%2Cmode%3Aabsolute%2Cto%3A'Tue%20Feb%2028%202017%2023%3A59%3A59%20GMT%2B0800'\\\\)\\\\))\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "4fbf06e0-2c5d-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 2016北京质量问题分析 md",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 2016北京质量问题分析 md\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"## 2016年底的北京雾霾是什么情况？\\n\\n### 分析\\n从图表分析可以看出，2016年冬季较2015年雾霾严重很多，PM25的均值高于往年，且污染严重的天数比例也高于往年，因此人们实际感受到的是2016年冬季雾霾比往年严重。\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "69b49040-2c5a-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 2016 vs 2015 unhealthy 占比 TL",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 2016 vs 2015 unhealthy 占比 TL\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=air_quality_days,q='value_max:>150',offset=-1y).divide(.es(index=air_quality_days,offset=-1y)).multiply(100).label(2015).lines(fill=1,width=1),.es(index=air_quality_days,q='value_max:>150').divide(.es(index=air_quality_days)).multiply(100).label(2016).lines(fill=3,width=1).title('2016 vs 2015 雾霾天数占比')\",\"interval\":\"1M\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "e03d6850-2c40-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - AQI 质量随时间分布占比",
+      "visState": "{\"aggs\":[],\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"1M\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"#68BC00\",\"fill\":\"1\",\"formatter\":\"percent\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"\",\"line_width\":\"3\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":1,\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(142,28,77,1)\",\"filter\":\"value_max:>300\",\"id\":\"f7003d71-2c3f-11e8-9df6-6119ff8a422d\",\"label\":\"Hazardous\"},{\"color\":\"rgba(221,57,44,1)\",\"filter\":\"value_max:(>200 && <=300) \",\"id\":\"03b988a0-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Very Unhealthy \"},{\"color\":\"rgba(236,87,41,1)\",\"filter\":\"value_max:(>150 && <=200)\",\"id\":\"1bfa2eb0-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Unhealthy \"},{\"color\":\"rgba(242,153,56,1)\",\"filter\":\"value_max:(>100 && <=150)\",\"id\":\"1fa1b2e1-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Unhealthy for Sensitive Group\"},{\"color\":\"rgba(246,193,67,1)\",\"filter\":\"value_max:(>50 && <=100)\",\"id\":\"1fee2530-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Moderate\"},{\"color\":\"rgba(83,183,141,1)\",\"filter\":\"value_max:<=50\",\"id\":\"20432300-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Good\"}],\"split_mode\":\"filters\",\"stacked\":\"percent\"}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"title\":\"[Project] 空气质量分析 - AQI 质量随时间分布占比\",\"type\":\"metrics\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "c20d2f90-2c50-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 每年蓝天占比(VB)",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 每年蓝天占比(VB)\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"background_color_rules\":[{\"id\":\"4d6c4d00-2c4c-11e8-93ee-8d784b1192ec\"}],\"bar_color_rules\":[{\"id\":\"e5685730-2c4b-11e8-93ee-8d784b1192ec\"}],\"gauge_color_rules\":[{\"id\":\"e4bf6d00-2c4b-11e8-93ee-8d784b1192ec\"}],\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_width\":10,\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"1y\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(244,78,59,1)\",\"fill\":\"0.5\",\"filter\":\"\",\"formatter\":\"percent\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"\",\"line_width\":\"1\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":\"3\",\"seperate_axis\":0,\"split_filters\":[{\"filter\":\"value_max:>100\",\"label\":\"Not Good\",\"color\":\"rgba(204,204,204,1)\",\"id\":\"78aeac10-2c4c-11e8-93ee-8d784b1192ec\"},{\"color\":\"rgba(115,216,255,1)\",\"filter\":\"value_max:<=100\",\"id\":\"80c5bf60-2c4c-11e8-93ee-8d784b1192ec\",\"label\":\"Good\"}],\"split_mode\":\"filters\",\"stacked\":\"percent\"}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "33c50ee0-2c48-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - AQI 简化质量随时间分布占比",
+      "visState": "{\"aggs\":[],\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"1M\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"#68BC00\",\"fill\":\"1\",\"formatter\":\"percent\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"\",\"line_width\":\"3\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":1,\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(142,28,77,1)\",\"filter\":\"value_max:>200\",\"id\":\"f7003d71-2c3f-11e8-9df6-6119ff8a422d\",\"label\":\"Very Unhealthy\"},{\"color\":\"rgba(242,153,56,1)\",\"filter\":\"value_max:(>100 && <=200)\",\"id\":\"1fa1b2e1-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Unhealthy\"},{\"color\":\"rgba(83,183,141,1)\",\"filter\":\"value_max:<=100\",\"id\":\"20432300-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Good\"}],\"split_mode\":\"filters\",\"stacked\":\"percent\"}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"title\":\"[Project] 空气质量分析 - AQI 简化质量随时间分布占比\",\"type\":\"metrics\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "8e8c8ab0-2c93-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 简化分析",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 简化分析\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"1M\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"#68BC00\",\"fill\":\"1\",\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"\",\"line_width\":\"7\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":1,\"seperate_axis\":0,\"split_filters\":[{\"color\":\"#68BC00\",\"filter\":\"value_max:<=100\",\"id\":\"030e65d0-2c93-11e8-9ee3-13e534c4a05a\",\"label\":\"Good\"},{\"color\":\"rgba(254,146,0,1)\",\"filter\":\"value_max:(>100 && <200)\",\"id\":\"0ff1f551-2c93-11e8-9ee3-13e534c4a05a\",\"label\":\"Unhealthy\"},{\"color\":\"rgba(159,5,0,1)\",\"filter\":\"value_max:>200\",\"id\":\"28b4c3b0-2c93-11e8-9ee3-13e534c4a05a\",\"label\":\"Very Unhealthy\"}],\"split_mode\":\"filters\",\"stacked\":\"percent\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "d572da80-2c50-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - 每月蓝天占比(VB)",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - 每月蓝天占比(VB)\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"background_color_rules\":[{\"id\":\"4d6c4d00-2c4c-11e8-93ee-8d784b1192ec\"}],\"bar_color_rules\":[{\"id\":\"e5685730-2c4b-11e8-93ee-8d784b1192ec\"}],\"gauge_color_rules\":[{\"id\":\"e4bf6d00-2c4b-11e8-93ee-8d784b1192ec\"}],\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_width\":10,\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"1M\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(244,78,59,1)\",\"fill\":\"0.5\",\"filter\":\"\",\"formatter\":\"percent\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"\",\"line_width\":\"1\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":\"3\",\"seperate_axis\":0,\"split_filters\":[{\"filter\":\"value_max:>100\",\"label\":\"Not Good\",\"color\":\"rgba(204,204,204,1)\",\"id\":\"78aeac10-2c4c-11e8-93ee-8d784b1192ec\"},{\"color\":\"rgba(115,216,255,1)\",\"filter\":\"value_max:<=100\",\"id\":\"80c5bf60-2c4c-11e8-93ee-8d784b1192ec\",\"label\":\"Good\"}],\"split_mode\":\"filters\",\"stacked\":\"percent\"}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "2c949af0-2c5c-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - AQI 简化质量随时间分布占比(按天)(去年)",
+      "visState": "{\"aggs\":[],\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"1\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"#68BC00\",\"fill\":\"1\",\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"\",\"line_width\":\"0\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"offset_time\":\"1y\",\"point_size\":1,\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(142,28,77,1)\",\"filter\":\"value_max:>200\",\"id\":\"f7003d71-2c3f-11e8-9df6-6119ff8a422d\",\"label\":\"Very Unhealthy\"},{\"color\":\"rgba(242,153,56,1)\",\"filter\":\"value_max:(>100 && <=200)\",\"id\":\"1fa1b2e1-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Unhealthy\"},{\"color\":\"rgba(83,183,141,1)\",\"filter\":\"value_max:<=100\",\"id\":\"20432300-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Good\"}],\"split_mode\":\"filters\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"title\":\"[Project] 空气质量分析 - AQI 简化质量随时间分布占比(按天)(去年)\",\"type\":\"metrics\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "1d5eb700-2c5c-11e8-990e-b5275f7b2117",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] 空气质量分析 - AQI 简化质量随时间分布占比(按天)",
+      "visState": "{\"title\":\"[Project] 空气质量分析 - AQI 简化质量随时间分布占比(按天)\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"1\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"air_quality_days\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"#68BC00\",\"fill\":\"1\",\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"\",\"line_width\":\"0\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":1,\"seperate_axis\":0,\"split_filters\":[{\"color\":\"rgba(142,28,77,1)\",\"filter\":\"value_max:>200\",\"id\":\"f7003d71-2c3f-11e8-9df6-6119ff8a422d\",\"label\":\"Very Unhealthy\"},{\"color\":\"rgba(242,153,56,1)\",\"filter\":\"value_max:(>100 && <=200)\",\"id\":\"1fa1b2e1-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Unhealthy\"},{\"color\":\"rgba(83,183,141,1)\",\"filter\":\"value_max:<=100\",\"id\":\"20432300-2c40-11e8-9df6-6119ff8a422d\",\"label\":\"Good\"}],\"split_mode\":\"filters\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":0,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "8e30afd0-2d27-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 慕课类型岁时间的访问热度",
+      "visState": "{\"title\":\"[Project] imooc log - 慕课类型岁时间的访问热度\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Reds\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"imooc_type\",\"size\":6,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 35,000\":\"rgb(255,245,240)\",\"35,000 - 70,000\":\"rgb(252,187,161)\",\"70,000 - 105,000\":\"rgb(251,106,74)\",\"105,000 - 140,000\":\"rgb(203,24,29)\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "2087f120-2d25-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问资源数 breakdown by res",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问资源数 breakdown by res\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Unique count of request.keyword\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Unique count of request.keyword\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"request.keyword\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"request.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "8c1e18f0-2d26-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问次数分布情况 vb",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问次数分布情况 vb\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"nginx_logs_2*\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(211,49,21,1)\",\"fill\":\"0\",\"filter\":\"!response_status_code:(200 OR 301 OR 304)\",\"formatter\":\"number\",\"id\":\"178e5090-2d26-11e8-8155-734436d96530\",\"label\":\"异常请求\",\"line_width\":\"3\",\"metrics\":[{\"id\":\"178e5091-2d26-11e8-8155-734436d96530\",\"type\":\"count\"}],\"point_size\":\"3\",\"seperate_axis\":1,\"split_mode\":\"filter\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"bar\",\"color\":\"#68BC00\",\"fill\":0.5,\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"line_width\":1,\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"point_size\":1,\"seperate_axis\":0,\"split_mode\":\"terms\",\"stacked\":\"stacked\",\"terms_field\":\"response_status_code\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "00b904e0-2d27-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - qps",
+      "visState": "{\"type\":\"timelion\",\"title\":\"[Project] imooc log - qps\",\"params\":{\"expression\":\".es(index=nginx_logs_2*).label(qps).scale_interval(interval=1s)\",\"interval\":\"auto\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "b9f42100-2cbf-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - region map",
+      "visState": "{\"title\":\"[Project] imooc log - region map\",\"type\":\"region_map\",\"params\":{\"addTooltip\":true,\"colorSchema\":\"Yellow to Red\",\"isDisplayWarning\":true,\"legendPosition\":\"bottomright\",\"mapCenter\":[0,0],\"mapZoom\":2,\"selectedJoinField\":{\"description\":\"Two letter abbreviation\",\"name\":\"iso2\"},\"selectedLayer\":{\"attribution\":\"<p><a href=\\\"http://www.naturalearthdata.com/about/terms-of-use\\\">Made with NaturalEarth</a> | <a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"created_at\":\"2017-04-26T17:12:15.978370\",\"fields\":[{\"description\":\"Two letter abbreviation\",\"name\":\"iso2\"},{\"description\":\"Country name\",\"name\":\"name\"},{\"description\":\"Three letter abbreviation\",\"name\":\"iso3\"}],\"format\":\"geojson\",\"id\":5659313586569216,\"layerId\":\"elastic_maps_service.World Countries\",\"name\":\"World Countries\",\"tags\":[],\"url\":\"https://vector.maps.elastic.co/blob/5659313586569216?elastic_tile_service_tos=agree&my_app_version=6.1.1&license=7743ab8e-7b4d-451e-9760-b16763b5b6c9\"},\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.country_code2\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"mapCenter\":[31.50362930577303,110.56640625000001],\"mapZoom\":3}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "19d9ca60-2d2a-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 大于1秒的请求",
+      "visState": "{\"title\":\"[Project] imooc log - 大于1秒的请求\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"cardinal\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"response_time:>1\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "b441b660-2d27-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 地图分布",
+      "visState": "{\"title\":\"[Project] imooc log - 地图分布\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":2}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "389e2470-2d28-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 用户浏览器分布",
+      "visState": "{\"title\":\"[Project] imooc log - 用户浏览器分布\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"useragent.name\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "23b7a5e0-2d28-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 用户 设备 分布",
+      "visState": "{\"title\":\"[Project] imooc log - 用户 设备 分布\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"useragent.device\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "07dc25d0-2d28-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 用户 OS 分布",
+      "visState": "{\"title\":\"[Project] imooc log - 用户 OS 分布\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"useragent.os\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "e9b1acb0-2d27-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 访问流量时间分布",
+      "visState": "{\"title\":\"[Project] imooc log - 访问流量时间分布\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"nginx_logs_2*\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(211,49,21,1)\",\"fill\":0.5,\"formatter\":\"bytes\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"line_width\":1,\"metrics\":[{\"field\":\"bytes\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\"}],\"point_size\":1,\"seperate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "ef2a75d0-2d24-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问流量数 breakdown by res type",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问流量数 breakdown by res type\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":10},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":false,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Sum of bytes\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Sum of bytes\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"imooc_type\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"资源类型\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Sum of bytes\":\"#BF1B00\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "ec1617a0-2d29-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 请求响应时间分布",
+      "visState": "{\"title\":\"[Project] imooc log - 请求响应时间分布\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Reds\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"enabled\":true,\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"response_time\",\"ranges\":[{\"from\":0,\"to\":0.1},{\"from\":0.1,\"to\":0.2},{\"from\":0.2,\"to\":0.5},{\"from\":0.5,\"to\":1},{\"from\":1,\"to\":2},{\"from\":2,\"to\":5},{\"from\":5,\"to\":10000}]}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 75,000\":\"rgb(255,245,240)\",\"75,000 - 150,000\":\"rgb(252,187,161)\",\"150,000 - 225,000\":\"rgb(251,106,74)\",\"225,000 - 300,000\":\"rgb(203,24,29)\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"response_time:>0\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "15921d50-2d24-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问次数 breakdown by hostname",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问次数 breakdown by hostname\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":false,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"hostname\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Hostname\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false,\"colors\":{\"Count\":\"#BF1B00\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "b394b4e0-2d24-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问资源数",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问资源数\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":25}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"request.keyword\",\"customLabel\":\"总访问资源数\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "9136a430-2d24-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问用户数",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问用户数\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":25}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"clientip\",\"customLabel\":\"总访问用户数\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c4d7d550-2d21-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问流量数",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问流量数\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":25}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"总流量\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "7f1dc490-2d24-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问次数",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问次数\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":25}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"总访问次数\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "318eae60-2d2e-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - video 前10名",
+      "visState": "{\"title\":\"[Project] imooc - video 前10名\",\"type\":\"horizontal_bar\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":200},\"position\":\"left\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"bottom\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":false,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"imooc_res_id\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Count\":\"#BF1B00\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"key\":\"imooc_type\",\"negate\":false,\"params\":{\"query\":\"video\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"video\"},\"query\":{\"match\":{\"imooc_type\":{\"query\":\"video\",\"type\":\"phrase\"}}}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "4ef9cf20-2d2e-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - article 前10名",
+      "visState": "{\"title\":\"[Project] imooc - article 前10名\",\"type\":\"horizontal_bar\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":200},\"position\":\"left\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"bottom\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":false,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"imooc_res_id\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Count\":\"#BF1B00\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"imooc_type\",\"value\":\"article\",\"params\":{\"query\":\"article\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"imooc_type\":{\"query\":\"article\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "3ada7120-2d2e-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - code 前10名",
+      "visState": "{\"title\":\"[Project] imooc - code 前10名\",\"type\":\"horizontal_bar\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":200},\"position\":\"left\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"bottom\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":false,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"imooc_res_id\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Count\":\"#BF1B00\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"imooc_type\",\"value\":\"code\",\"params\":{\"query\":\"code\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"imooc_type\":{\"query\":\"code\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "461cacb0-2d2e-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - learn 前10名",
+      "visState": "{\"title\":\"[Project] imooc - learn 前10名\",\"type\":\"horizontal_bar\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":200},\"position\":\"left\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"bottom\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":false,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"imooc_res_id\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Count\":\"#BF1B00\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"imooc_type\",\"value\":\"learn\",\"params\":{\"query\":\"learn\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"imooc_type\":{\"query\":\"learn\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "506c2f60-2d24-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问用户数 breakdown by city",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问用户数 breakdown by city\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":false,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Unique count of clientip\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Unique count of clientip\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"clientip\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.city_name\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"城市\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of clientip\":\"#BF1B00\"},\"legendOpen\":false}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "6f35d940-2d25-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 总访问资源数 breakdown by hostname",
+      "visState": "{\"title\":\"[Project] imooc log - 总访问资源数 breakdown by hostname\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":false,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Unique count of request.keyword\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Unique count of request.keyword\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"request.keyword\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"hostname\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Hostname\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of request.keyword\":\"#BF1B00\"},\"legendOpen\":false}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "d5c3b790-2d2a-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc log - 网站来源",
+      "visState": "{\"title\":\"[Project] imooc log - 网站来源\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"referrer_host\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"www.imooc.com\",\"params\":{\"query\":\"www.imooc.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"www.imooc.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"coding.imooc.com\",\"params\":{\"query\":\"coding.imooc.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"coding.imooc.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"m.imooc.com\",\"params\":{\"query\":\"m.imooc.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"m.imooc.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"v2.mukewang.com\",\"params\":{\"query\":\"v2.mukewang.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"v2.mukewang.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"class.imooc.com\",\"params\":{\"query\":\"class.imooc.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"class.imooc.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"responsiveweb.t.imooc.io\",\"params\":{\"query\":\"responsiveweb.t.imooc.io\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"responsiveweb.t.imooc.io\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"shopingdemo.t.imooc.io\",\"params\":{\"query\":\"shopingdemo.t.imooc.io\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"shopingdemo.t.imooc.io\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"t.imooc.com\",\"params\":{\"query\":\"t.imooc.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"t.imooc.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"webappdatashow.t.imooc.io\",\"params\":{\"query\":\"webappdatashow.t.imooc.io\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"webappdatashow.t.imooc.io\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"cr.fw.imooc.com\",\"params\":{\"query\":\"cr.fw.imooc.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"cr.fw.imooc.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"mylocalhost.p.imooc.io\",\"params\":{\"query\":\"mylocalhost.p.imooc.io\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"mylocalhost.p.imooc.io\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"www.mukewang.com\",\"params\":{\"query\":\"www.mukewang.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"www.mukewang.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"referrer_host\",\"value\":\"imooc.com\",\"params\":{\"query\":\"imooc.com\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"referrer_host\":{\"query\":\"imooc.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "1a548660-2d2f-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - 用户活跃时间分布",
+      "visState": "{\"title\":\"[Project] imooc - 用户活跃时间分布\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Unique count of clientip\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Unique count of clientip\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"cardinal\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"clientip\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Unique count of clientip\":\"#BF1B00\"}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "82306580-2d55-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - 排名前10 的访问页面",
+      "visState": "{\"title\":\"[Project] imooc - 排名前10 的访问页面\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"request.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "6a91cbd0-2d55-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - 排名前10 的用户",
+      "visState": "{\"title\":\"[Project] imooc - 排名前10 的用户\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"clientip\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "e3418e70-2d2e-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - 兴趣最广泛用户文字云",
+      "visState": "{\"title\":\"[Project] imooc - 兴趣最广泛用户文字云\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"imooc_res_id\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"clientip\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "86804960-2d2e-11e8-bf91-4d0771ca03d6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Project] imooc - 城市文字云",
+      "visState": "{\"title\":\"[Project] imooc - 城市文字云\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.city_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "2303db20-2cb8-11e8-bf91-4d0771ca03d6",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  }
+]

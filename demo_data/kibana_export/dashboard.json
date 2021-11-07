@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "dbbab9d0-2c55-11e8-990e-b5275f7b2117",
+    "_type": "dashboard",
+    "_source": {
+      "title": "[Project] 北京的空气质量-背景介绍",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":5,\"i\":\"1\",\"w\":6,\"x\":0,\"y\":2},\"id\":\"d1379a70-2c53-11e8-990e-b5275f7b2117\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":5,\"i\":\"2\",\"w\":6,\"x\":6,\"y\":2},\"id\":\"256f8260-2c54-11e8-990e-b5275f7b2117\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":2,\"i\":\"3\",\"w\":12,\"x\":0,\"y\":0},\"id\":\"73d5e4c0-2c55-11e8-990e-b5275f7b2117\",\"panelIndex\":\"3\",\"title\":\"\",\"type\":\"visualization\",\"version\":\"6.1.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":true,\"useMargins\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-10y",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "a9ff72a0-2c4b-11e8-990e-b5275f7b2117",
+    "_type": "dashboard",
+    "_source": {
+      "title": "[Project] 北京的空气质量这些年有变好吗？",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":3,\"i\":\"1\",\"w\":6,\"x\":0,\"y\":5},\"id\":\"e03d6850-2c40-11e8-990e-b5275f7b2117\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":3,\"i\":\"2\",\"w\":6,\"x\":6,\"y\":5},\"id\":\"33c50ee0-2c48-11e8-990e-b5275f7b2117\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":3,\"i\":\"6\",\"w\":6,\"x\":0,\"y\":8},\"id\":\"c20d2f90-2c50-11e8-990e-b5275f7b2117\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":3,\"i\":\"7\",\"w\":6,\"x\":6,\"y\":8},\"id\":\"d572da80-2c50-11e8-990e-b5275f7b2117\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":3,\"i\":\"8\",\"w\":12,\"x\":0,\"y\":11},\"id\":\"eadb64e0-2c51-11e8-990e-b5275f7b2117\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":3,\"i\":\"9\",\"w\":12,\"x\":0,\"y\":2},\"id\":\"b8f13290-2c54-11e8-990e-b5275f7b2117\",\"panelIndex\":\"9\",\"title\":\"\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":2,\"i\":\"10\",\"w\":12,\"x\":0,\"y\":0},\"id\":\"73d5e4c0-2c55-11e8-990e-b5275f7b2117\",\"panelIndex\":\"10\",\"title\":\"\",\"type\":\"visualization\",\"version\":\"6.1.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "uiStateJSON": "{\"P-3\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-10y",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "84faa6c0-2c5d-11e8-990e-b5275f7b2117",
+    "_type": "dashboard",
+    "_source": {
+      "title": "[Project] 2016年的北京雾霾",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":4,\"i\":\"2\",\"w\":7,\"x\":5,\"y\":2},\"id\":\"69b49040-2c5a-11e8-990e-b5275f7b2117\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":4,\"i\":\"3\",\"w\":12,\"x\":0,\"y\":6},\"id\":\"316e3de0-2c59-11e8-990e-b5275f7b2117\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":2,\"i\":\"4\",\"w\":12,\"x\":0,\"y\":13},\"id\":\"1d5eb700-2c5c-11e8-990e-b5275f7b2117\",\"panelIndex\":\"4\",\"title\":\"2016年冬季每天空气质量情况\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":2,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":15},\"id\":\"2c949af0-2c5c-11e8-990e-b5275f7b2117\",\"panelIndex\":\"5\",\"title\":\"2015年冬季每天空气质量情况\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":2,\"i\":\"6\",\"w\":12,\"x\":0,\"y\":0},\"id\":\"73d5e4c0-2c55-11e8-990e-b5275f7b2117\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":4,\"i\":\"7\",\"w\":5,\"x\":0,\"y\":2},\"id\":\"4fbf06e0-2c5d-11e8-990e-b5275f7b2117\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":3,\"i\":\"8\",\"w\":6,\"x\":0,\"y\":10},\"id\":\"8390c110-2c5e-11e8-990e-b5275f7b2117\",\"panelIndex\":\"8\",\"title\":\"2016年\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"gridData\":{\"h\":3,\"i\":\"9\",\"w\":6,\"x\":6,\"y\":10},\"id\":\"905c0da0-2c5e-11e8-990e-b5275f7b2117\",\"panelIndex\":\"9\",\"title\":\"2015年\",\"type\":\"visualization\",\"version\":\"6.1.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "Tue Feb 28 2017 23:59:59 GMT+0800",
+      "timeFrom": "Sat Oct 01 2016 00:00:00 GMT+0800",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "57fd81d0-2d2d-11e8-bf91-4d0771ca03d6",
+    "_type": "dashboard",
+    "_source": {
+      "title": "[Project] imooc log -Nginx Overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":4,\"w\":3,\"h\":2,\"i\":\"1\"},\"id\":\"7f1dc490-2d24-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":3,\"y\":4,\"w\":3,\"h\":2,\"i\":\"2\"},\"id\":\"c4d7d550-2d21-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":6,\"y\":4,\"w\":3,\"h\":2,\"i\":\"3\"},\"id\":\"9136a430-2d24-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":9,\"y\":4,\"w\":3,\"h\":2,\"i\":\"4\"},\"id\":\"b394b4e0-2d24-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":6,\"w\":3,\"h\":4,\"i\":\"5\"},\"id\":\"15921d50-2d24-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":3,\"y\":6,\"w\":3,\"h\":4,\"i\":\"6\"},\"id\":\"ef2a75d0-2d24-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":6,\"y\":6,\"w\":3,\"h\":4,\"i\":\"7\"},\"id\":\"506c2f60-2d24-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":9,\"y\":6,\"w\":3,\"h\":4,\"i\":\"8\"},\"id\":\"6f35d940-2d25-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":10,\"w\":6,\"h\":6,\"i\":\"9\"},\"id\":\"b9f42100-2cbf-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":6,\"y\":10,\"w\":6,\"h\":3,\"i\":\"10\"},\"id\":\"00b904e0-2d27-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":6,\"y\":20,\"w\":6,\"h\":3,\"i\":\"11\"},\"id\":\"19d9ca60-2d2a-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":6,\"y\":16,\"w\":6,\"h\":4,\"i\":\"12\"},\"id\":\"8e30afd0-2d27-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":16,\"w\":6,\"h\":4,\"i\":\"13\"},\"id\":\"d5c3b790-2d2a-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":6,\"y\":13,\"w\":6,\"h\":3,\"i\":\"14\"},\"id\":\"e9b1acb0-2d27-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":0,\"y\":23,\"w\":4,\"h\":3,\"i\":\"15\"},\"id\":\"07dc25d0-2d28-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":8,\"y\":23,\"w\":4,\"h\":3,\"i\":\"16\"},\"id\":\"23b7a5e0-2d28-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":4,\"y\":23,\"w\":4,\"h\":3,\"i\":\"17\"},\"id\":\"389e2470-2d28-11e8-bf91-4d0771ca03d6\",\"type\":\"visualization\",\"version\":\"6.1.1\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"18\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"8c1e18f0-2d26-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":0,\"y\":20,\"w\":6,\"h\":3,\"i\":\"19\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"ec1617a0-2d29-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"20\",\"gridData\":{\"x\":0,\"y\":26,\"w\":12,\"h\":4,\"i\":\"20\"},\"version\":\"6.1.1\",\"type\":\"search\",\"id\":\"2303db20-2cb8-11e8-bf91-4d0771ca03d6\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "uiStateJSON": "{\"P-12\":{\"vis\":{\"defaultColors\":{\"0 - 35,000\":\"rgb(255,245,240)\",\"35,000 - 70,000\":\"rgb(252,187,161)\",\"70,000 - 105,000\":\"rgb(251,106,74)\",\"105,000 - 140,000\":\"rgb(203,24,29)\"}}},\"P-5\":{\"vis\":{\"legendOpen\":false}},\"P-6\":{\"vis\":{\"legendOpen\":false}},\"P-9\":{\"mapCenter\":[-30.751277776257812,5.625],\"mapZoom\":1},\"P-19\":{\"vis\":{\"defaultColors\":{\"0 - 75,000\":\"rgb(255,245,240)\",\"75,000 - 150,000\":\"rgb(252,187,161)\",\"150,000 - 225,000\":\"rgb(251,106,74)\",\"225,000 - 300,000\":\"rgb(203,24,29)\"},\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "Thu Nov 10 2016 23:59:59 GMT+0800",
+      "timeFrom": "Thu Nov 10 2016 00:00:00 GMT+0800",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "b2867830-2d2f-11e8-bf91-4d0771ca03d6",
+    "_type": "dashboard",
+    "_source": {
+      "title": "[Project] imooc log - imooc overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":6,\"y\":10,\"w\":6,\"h\":5,\"i\":\"1\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"4ef9cf20-2d2e-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":6,\"y\":5,\"w\":6,\"h\":5,\"i\":\"2\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"3ada7120-2d2e-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":10,\"w\":6,\"h\":5,\"i\":\"3\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"461cacb0-2d2e-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":5,\"w\":6,\"h\":5,\"i\":\"4\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"318eae60-2d2e-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":6,\"y\":15,\"w\":6,\"h\":4,\"i\":\"5\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"e3418e70-2d2e-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":15,\"w\":6,\"h\":4,\"i\":\"6\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"86804960-2d2e-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":19,\"w\":12,\"h\":4,\"i\":\"7\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"1a548660-2d2f-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":3,\"y\":0,\"w\":9,\"h\":5,\"i\":\"8\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"b441b660-2d27-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":0,\"w\":3,\"h\":2,\"i\":\"9\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"9136a430-2d24-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":0,\"y\":2,\"w\":3,\"h\":3,\"i\":\"10\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"506c2f60-2d24-11e8-bf91-4d0771ca03d6\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":23,\"w\":6,\"h\":3,\"i\":\"11\"},\"version\":\"6.1.1\",\"type\":\"visualization\",\"id\":\"6a91cbd0-2d55-11e8-bf91-4d0771ca03d6\"},{\"gridData\":{\"w\":6,\"h\":3,\"x\":6,\"y\":23,\"i\":\"12\"},\"version\":\"6.1.1\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"id\":\"82306580-2d55-11e8-bf91-4d0771ca03d6\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
+      "uiStateJSON": "{\"P-3\":{\"vis\":{\"legendOpen\":false}},\"P-1\":{\"vis\":{\"legendOpen\":false}},\"P-4\":{\"vis\":{\"legendOpen\":false}},\"P-2\":{\"vis\":{\"legendOpen\":false}},\"P-11\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-12\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "2016-11-10T15:59:59.999Z",
+      "timeFrom": "2016-11-09T16:00:00.000Z",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"b7c21f70-2cb7-11e8-bf91-4d0771ca03d6\",\"type\":\"phrase\",\"key\":\"geoip.city_name\",\"value\":\"Beijing\",\"params\":{\"query\":\"Beijing\",\"type\":\"phrase\"},\"disabled\":true,\"negate\":false,\"alias\":null},\"query\":{\"match\":{\"geoip.city_name\":{\"query\":\"Beijing\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]

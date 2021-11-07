@@ -1,0 +1,283 @@
+[
+  {
+    "_id": "04414990-28fb-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]24hSerialDiff",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"@timestamp\",\"interval\":\"h\",\"min_doc_count\":0},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"bytes\"},\"schema\":\"metric\",\"type\":\"sum\"},{\"enabled\":true,\"id\":\"1\",\"params\":{\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{\"field\":\"bytes\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"hideCustomLabel\":true,\"max\":null,\"min\":0,\"name\":\"metricAgg\",\"params\":[],\"title\":\"Metric Agg\"},\"type\":\"sum\"},\"json\":\"{\\n\\\"lag\\\":24\\n}\",\"metricAgg\":\"custom\"},\"schema\":\"metric\",\"type\":\"serial_diff\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"3\",\"label\":\"Sum of bytes\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-2\"},{\"data\":{\"id\":\"1\",\"label\":\"Serial Diff of Sum of bytes\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"cardinal\",\"lineWidth\":2,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Serial Diff of Sum of bytes\"},\"type\":\"value\"},{\"id\":\"ValueAxis-2\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"RightAxis-1\",\"position\":\"right\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Sum of bytes\"},\"type\":\"value\"}]},\"title\":\"[Demo]24hSerialDiff\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"name\":\"request\",\"fill\":false}},\"vis\":{\"colors\":{\"Serial Diff of Sum of bytes\":\"#BF1B00\",\"Sum of bytes\":\"#7EB26D\"},\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "72429640-2902-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Top 5 Src Contry In all data",
+      "visState": "{\"title\":\"[Demo]Top 5 Src Contry In all data\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"geo.src.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "84861610-2907-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Dot size",
+      "visState": "{\"title\":\"[Demo]Dot size\",\"type\":\"area\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"area\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}],\"radiusRatio\":63},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":\"geo.src.keyword:CN\"},\"label\":\"CN\"},{\"input\":{\"query\":\"geo.src.keyword:IN\"}},{\"input\":{\"query\":\"others\"}}],\"json\":\"{\\n        \\\"other_bucket_key\\\": \\\"others\\\"\\n}\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"radius\",\"params\":{\"field\":\"bytes\",\"json\":\"\",\"customLabel\":\"scriptasfd\"}}]}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"name\":\"request\",\"fill\":false}},\"vis\":{\"colors\":{\"geo.src.keyword:IN\":\"#967302\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "7dce5df0-2902-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Top 5 Src Country In every interval",
+      "visState": "{\"title\":\"[Demo]Top 5 Src Country In every interval\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"geo.src.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"name\":\"request\",\"fill\":false}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "6e795840-290d-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Goal with range",
+      "visState": "{\"title\":\"[Demo]Goal with range\",\"type\":\"goal\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"isDisplayWarning\":false,\"type\":\"gauge\",\"gauge\":{\"verticalSplit\":true,\"autoExtend\":false,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"useRanges\":false,\"colorSchema\":\"Greens\",\"gaugeColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":20000}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\",\"width\":2},\"type\":\"meter\",\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60},\"extendRange\":false}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":false,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"geo.src.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 20000\":\"rgb(247,252,245)\"},\"colors\":{\"0 - 20000\":\"#BF1B00\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "cc5709d0-290d-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Gauge",
+      "visState": "{\"title\":\"[Demo]Gauge\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"verticalSplit\":false,\"extendRange\":false,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":50000000},{\"from\":50000000,\"to\":100000000}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"\",\"fontSize\":60,\"labelColor\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 50000000\":\"rgb(0,104,55)\",\"50000000 - 100000000\":\"rgb(165,0,38)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "53ef65d0-290a-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Many Buckets Options Setting",
+      "visState": "{\"title\":\"[Demo]Many Buckets Options Setting\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":true,\"showPartialRows\":false,\"showTotal\":true,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"geo.src.keyword\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"bucket\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}},\"spy\":{\"mode\":{\"name\":\"response\",\"fill\":false}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "e4c872f0-2904-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Top Hits Bytes",
+      "visState": "{\"title\":\"[Demo]Top Hits Bytes\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"aggregate\":\"concat\",\"size\":3,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"geo.src.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"_term\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "61bfdb70-290c-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Metrics Color Settings",
+      "visState": "{\"title\":\"[Demo]Metrics Color Settings\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":90000000},{\"from\":90000000,\"to\":900000000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":true,\"subText\":\"\",\"fontSize\":49}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "9a9baa40-29c1-11e8-8586-2d1829aed412",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Region Map",
+      "visState": "{\"title\":\"[Demo]Region Map\",\"type\":\"region_map\",\"params\":{\"addTooltip\":true,\"colorSchema\":\"Yellow to Red\",\"isDisplayWarning\":true,\"legendPosition\":\"bottomright\",\"mapCenter\":[0,0],\"mapZoom\":2,\"selectedJoinField\":{\"name\":\"iso2\",\"description\":\"Two letter abbreviation\"},\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}},\"selectedLayer\":{\"attribution\":\"<p><a href=\\\"http://www.naturalearthdata.com/about/terms-of-use\\\">Made with NaturalEarth</a> | <a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"name\":\"World Countries\",\"format\":\"geojson\",\"url\":\"https://vector.maps.elastic.co/blob/5659313586569216?elastic_tile_service_tos=agree&my_app_version=6.1.1&license=7743ab8e-7b4d-451e-9760-b16763b5b6c9\",\"fields\":[{\"name\":\"iso2\",\"description\":\"Two letter abbreviation\"},{\"name\":\"name\",\"description\":\"Country name\"},{\"name\":\"iso3\",\"description\":\"Three letter abbreviation\"}],\"created_at\":\"2017-04-26T17:12:15.978370\",\"tags\":[],\"id\":5659313586569216,\"layerId\":\"elastic_maps_service.World Countries\"}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"nginx.access.geoip.country_iso_code\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"mapCenter\":[45.213003555993964,29.707031250000004],\"mapZoom\":2,\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"filebeat-*\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "29990070-29e6-11e8-a5f1-1531fdb72b8f",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Viz-Metric",
+      "visState": "{\"title\":\"[Demo]Viz-Metric\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"\",\"axis_position\":\"left\",\"background_color\":null,\"background_color_rules\":[{\"value\":20000000,\"background_color\":\"rgba(244,78,59,1)\",\"color\":\"rgba(252,220,0,1)\",\"id\":\"6d6f9940-29e5-11e8-b1ea-75066ceb98a3\",\"opperator\":\"gt\"}],\"filter\":\"\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"logstash-*\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(251,158,0,1)\",\"fill\":\"0\",\"formatter\":\"bytes\",\"id\":\"f58cd550-29e4-11e8-bad9-cf0859c7fbc4\",\"label\":\"Average Bytes Per Day\",\"line_width\":\"2\",\"metrics\":[{\"field\":\"bytes\",\"id\":\"f58cd551-29e4-11e8-bad9-cf0859c7fbc4\",\"type\":\"sum\"},{\"field\":\"f58cd551-29e4-11e8-bad9-cf0859c7fbc4\",\"id\":\"1756bc50-29e5-11e8-bad9-cf0859c7fbc4\",\"sigma\":\"\",\"type\":\"avg_bucket\"}],\"override_index_pattern\":1,\"point_size\":\"0\",\"seperate_axis\":0,\"series_index_pattern\":\"logstash-*\",\"series_interval\":\"1d\",\"series_time_field\":\"@timestamp\",\"split_mode\":\"everything\",\"stacked\":\"none\",\"steps\":0},{\"axis_max\":\"50000000\",\"axis_min\":\"100\",\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(244,78,59,1)\",\"fill\":\"0.7\",\"formatter\":\"bytes\",\"hide_in_legend\":0,\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"Total Network Bytes\",\"line_width\":\"2\",\"metrics\":[{\"field\":\"bytes\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\"},{\"field\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"id\":\"83ee6b10-29e5-11e8-b1ea-75066ceb98a3\",\"type\":\"cumulative_sum\"}],\"offset_time\":\"\",\"point_size\":\"0\",\"seperate_axis\":0,\"split_color_mode\":\"rainbow\",\"split_mode\":\"everything\",\"stacked\":\"stacked\",\"steps\":0,\"terms_field\":\"geo.src.keyword\",\"terms_size\":\"5\",\"value_template\":\"{{value}}\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"metric\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "54356610-29e7-11e8-a5f1-1531fdb72b8f",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Viz-TOP N",
+      "visState": "{\"title\":\"[Demo]Viz-TOP N\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"\",\"axis_position\":\"left\",\"background_color\":null,\"background_color_rules\":[{\"background_color\":\"rgba(244,78,59,1)\",\"color\":\"rgba(252,220,0,1)\",\"id\":\"6d6f9940-29e5-11e8-b1ea-75066ceb98a3\",\"opperator\":\"gt\",\"value\":20000000}],\"bar_color_rules\":[{\"value\":2000000,\"id\":\"2ac8cde0-29e6-11e8-b864-e3f50927bb96\",\"bar_color\":\"rgba(211,49,21,1)\",\"opperator\":\"gt\"}],\"drilldown_url\":\"\",\"filter\":\"\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"logstash-*\",\"interval\":\"1d\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(204,204,204,1)\",\"fill\":\"0\",\"filter\":\"\",\"formatter\":\"bytes\",\"id\":\"f58cd550-29e4-11e8-bad9-cf0859c7fbc4\",\"label\":\"Average Bytes Per Day\",\"line_width\":\"2\",\"metrics\":[{\"field\":\"bytes\",\"id\":\"f58cd551-29e4-11e8-bad9-cf0859c7fbc4\",\"type\":\"sum\"},{\"field\":\"f58cd551-29e4-11e8-bad9-cf0859c7fbc4\",\"id\":\"1756bc50-29e5-11e8-bad9-cf0859c7fbc4\",\"sigma\":\"\",\"type\":\"avg_bucket\"}],\"override_index_pattern\":0,\"point_size\":\"0\",\"seperate_axis\":0,\"series_index_pattern\":\"logstash-*\",\"series_interval\":\"1d\",\"series_time_field\":\"@timestamp\",\"split_mode\":\"terms\",\"stacked\":\"none\",\"steps\":0,\"terms_field\":\"geo.src.keyword\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"top_n\",\"drop_last_bucket\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "66b0c2f0-29e5-11e8-a5f1-1531fdb72b8f",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Viz-line-with-average",
+      "visState": "{\"aggs\":[],\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"\",\"axis_position\":\"left\",\"background_color\":null,\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"logstash-*\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(251,158,0,1)\",\"fill\":\"0\",\"formatter\":\"bytes\",\"id\":\"f58cd550-29e4-11e8-bad9-cf0859c7fbc4\",\"label\":\"Average Bytes\",\"line_width\":\"2\",\"metrics\":[{\"field\":\"bytes\",\"id\":\"f58cd551-29e4-11e8-bad9-cf0859c7fbc4\",\"type\":\"sum\"},{\"field\":\"f58cd551-29e4-11e8-bad9-cf0859c7fbc4\",\"id\":\"1756bc50-29e5-11e8-bad9-cf0859c7fbc4\",\"sigma\":\"\",\"type\":\"avg_bucket\"}],\"point_size\":\"0\",\"seperate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\",\"steps\":0},{\"axis_max\":\"50000000\",\"axis_min\":\"100\",\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(244,78,59,1)\",\"fill\":\"0.7\",\"formatter\":\"bytes\",\"hide_in_legend\":0,\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"network\",\"line_width\":\"2\",\"metrics\":[{\"field\":\"bytes\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\"}],\"offset_time\":\"\",\"point_size\":\"0\",\"seperate_axis\":0,\"split_color_mode\":\"rainbow\",\"split_mode\":\"everything\",\"stacked\":\"stacked\",\"steps\":0,\"terms_field\":\"geo.src.keyword\",\"terms_size\":\"5\",\"value_template\":\"{{value}}\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"title\":\"[Demo]Viz-line-with-average\",\"type\":\"metrics\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "94bf6890-29bd-11e8-9f2b-3fdd0b830b31",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Geo Map",
+      "visState": "{\"title\":\"[Demo]Geo Map\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geo.coordinates\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":7}}]}",
+      "uiStateJSON": "{\"mapZoom\":3,\"mapCenter\":[50.35396388574188,-120.67544755060226],\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "ef7c4060-29e4-11e8-a5f1-1531fdb72b8f",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Viz-line",
+      "visState": "{\"aggs\":[],\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"\",\"axis_position\":\"left\",\"background_color\":null,\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"logstash-*\",\"interval\":\"auto\",\"series\":[{\"axis_max\":\"50000000\",\"axis_min\":\"100\",\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(244,78,59,1)\",\"fill\":\"0.7\",\"formatter\":\"bytes\",\"hide_in_legend\":0,\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"network\",\"line_width\":\"2\",\"metrics\":[{\"field\":\"bytes\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\"}],\"offset_time\":\"\",\"point_size\":\"0\",\"seperate_axis\":0,\"split_color_mode\":\"rainbow\",\"split_mode\":\"terms\",\"stacked\":\"stacked\",\"steps\":0,\"terms_field\":\"geo.src.keyword\",\"terms_size\":\"5\",\"value_template\":\"{{value}}\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"title\":\"[Demo]Viz-line\",\"type\":\"metrics\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "b8e3d8f0-2a8f-11e8-b5b0-798ed0b62c97",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Timelion-Memory consumption over time",
+      "visState": "{\"type\":\"timelion\",\"title\":\"[Demo]Timelion-Memory consumption over time\",\"params\":{\"expression\":\".es(index=metricbeat-*, timefield='@timestamp', metric='max:system.memory.actual.used.bytes').label('max memory').title('Memory consumption over time'), .es(index=metricbeat-*, timefield='@timestamp', metric='max:system.memory.actual.used.bytes').if(gt,7000000000,.es(index=metricbeat-*, timefield='@timestamp', metric='max:system.memory.actual.used.bytes'),null).label('warning').color('#FFCC11').lines(width=5), .es(index=metricbeat-*, timefield='@timestamp', metric='max:system.memory.actual.used.bytes').if(gt,7300000000,.es(index=metricbeat-*, timefield='@timestamp', metric='max:system.memory.actual.used.bytes'),null).label('severe').color('red').lines(width=5), .es(index=metricbeat-*, timefield='@timestamp', metric='max:system.memory.actual.used.bytes').mvavg(10).label('mvavg').lines(width=2).color(#5E5E5E).legend(columns=4, position=nw)\",\"interval\":\"auto\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "cac7c5e0-2a8f-11e8-b5b0-798ed0b62c97",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Timelion-Network traffic(MB/s)",
+      "visState": "{\"type\":\"timelion\",\"title\":\"[Demo]Timelion-Network traffic(MB/s)\",\"params\":{\"expression\":\".es(index=metricbeat*, timefield=@timestamp, metric=max:system.network.in.bytes).derivative().divide(1048576).lines(fill=2, width=1).color(green).label(\\\"Inbound traffic\\\").title(\\\"Network traffic (MB/s)\\\"), .es(index=metricbeat*, timefield=@timestamp, metric=max:system.network.out.bytes).derivative().multiply(-1).divide(1048576).lines(fill=2, width=1).color(blue).label(\\\"Outbound traffic\\\").legend(columns=2, position=nw)\",\"interval\":\"auto\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "d572ca80-2a8f-11e8-b5b0-798ed0b62c97",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Timelion-CPU usage over time",
+      "visState": "{\"type\":\"timelion\",\"title\":\"[Demo]Timelion-CPU usage over time\",\"params\":{\"expression\":\".es(offset=-1h,index=metricbeat-*, timefield='@timestamp', metric='avg:system.cpu.user.pct').label('last hour').lines(fill=1,width=0.5).color(gray), .es(index=metricbeat-*, timefield='@timestamp', metric='avg:system.cpu.user.pct').label('current hour').title('CPU usage over time').color(#1E90FF).legend(columns=2, position=nw)\",\"interval\":\"auto\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "83e9a9e0-2ac6-11e8-b5b0-798ed0b62c97",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Heatmap",
+      "visState": "{\"title\":\"[Demo]Heatmap\",\"type\":\"heatmap\",\"params\":{\"addLegend\":true,\"addTooltip\":true,\"colorSchema\":\"Yellow to Red\",\"colorsNumber\":4,\"colorsRange\":[],\"enableHover\":true,\"invertColors\":false,\"legendPosition\":\"right\",\"percentageMode\":false,\"setColorRange\":false,\"times\":[],\"type\":\"heatmap\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"color\":\"#555\",\"rotate\":0,\"show\":false},\"scale\":{\"defaultYExtents\":false,\"type\":\"linear\"},\"show\":false,\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"geo.src.keyword\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 225\":\"rgb(255,255,204)\",\"225 - 450\":\"rgb(254,217,118)\",\"450 - 675\":\"rgb(253,141,60)\",\"675 - 900\":\"rgb(227,27,28)\"}}}",
+      "description": "",
+      "savedSearchId": "9b563250-2a5e-11e8-b5b0-798ed0b62c97",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "1ffb37e0-28fb-11e8-9fdb-a52f12564299",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Demo]Average Daily Traffic Size",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customBucket\":{\"enabled\":true,\"id\":\"1-bucket\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"@timestamp\",\"interval\":\"d\",\"min_doc_count\":1},\"schema\":{\"aggFilter\":[],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"bucketAgg\",\"params\":[],\"title\":\"Bucket Agg\"},\"type\":\"date_histogram\"},\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{\"field\":\"bytes\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\",\"!sum_bucket\",\"!avg_bucket\",\"!min_bucket\",\"!max_bucket\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"metricAgg\",\"params\":[],\"title\":\"Metric Agg\"},\"type\":\"sum\"}},\"schema\":\"metric\",\"type\":\"avg_bucket\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":26,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"[Demo]Average Daily Traffic Size\",\"type\":\"metric\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"67c680c0-28c9-11e8-9fdb-a52f12564299\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  }
+]
