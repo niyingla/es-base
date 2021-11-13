@@ -4,6 +4,9 @@ type ES中每个文档都有与之对应的类型定义 就像数据库的 table
 document 文档是可以建立索引的基本信息单元 就像数据库的行 row（一条记录）
 field 类似数据库的表格的字段 column （一个字段）
 mapping 就是对索引库中索引的字段名及其数据类型进行定义 就像数据库的表结构 schema （建表语句）
+token or term 将文本转换成一系列单词的过程 也叫文本分析
+Analyzer包含两个核心组件，Tokenizer以及TokenFilter。两者的区别在于，前者在字符级别处理流，而后者则在词语级别处理流。
+Tokenizer是Analyzer的第一步，其构造函数接收一个Reader作为参数，而TokenFilter则是一个类似的拦截器，其参数可以是TokenStream、Tokenizer
 
 相关概念
 索引文件index：一个拥有几分相似特征的文档的集合，类似于数据库的不同的库

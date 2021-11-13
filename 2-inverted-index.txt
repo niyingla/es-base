@@ -1,7 +1,8 @@
 
-#index
+#index 删除索引
 DELETE my_index
 
+# 创建索引
 PUT my_index
 {
   "mappings": {
@@ -98,6 +99,10 @@ POST test/doc?refresh=true
 POST test/doc?refresh=true
 {"title": "noebl prize"}
 
+# 进行分词
+# test 测试分词的索引
+# field 分词字段
+# text 需要分词文本
 POST test/_analyze
 {
   "field":"title.trigram",
@@ -328,47 +333,6 @@ GET my_index/doc/_search
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 PUT test_index_10
 {
@@ -668,26 +632,29 @@ POST _analyze
   "text":"The 2 QUICK Brown-Foxes jumped over the lazy dog's bone."
 }
 
+#默认分词器 进行分词
 POST test_index/_analyze
 {
   "field": "username",
   "text":"hello world!"
 }
 
+#测试standard分词器和过滤器
 POST _analyze
 {
   "tokenizer": "standard",
   "filter":  [ "lowercase" ,"shingle","reverse"],
- "text":"a beauty Hello World!"
+  "text":"a beauty Hello World!"
 }
 
+#测试pattern 分词器
 POST _analyze
 {
   "analyzer": "pattern",
   "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog's bone."
 }
 
-
+#测试path_hierarchy 分词器
 POST _analyze
 {
   "tokenizer": "path_hierarchy",
@@ -696,6 +663,7 @@ POST _analyze
 
 
 
+# 测试字符过滤器
 POST _analyze
 {
   "text": "a Hello,world!",
@@ -704,6 +672,7 @@ POST _analyze
     "stop",
     "lowercase",
     {
+    #切分单词 最小2 最大4 hello 分词结果 he hel hell
       "type": "ngram",
       "min_gram": 2,
       "max_gram": 4
@@ -713,7 +682,7 @@ POST _analyze
 
 
 
-
+# 测试字符过滤器
 POST _analyze
 {
   "tokenizer": "keyword",
